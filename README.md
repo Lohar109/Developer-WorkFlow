@@ -1,4 +1,4 @@
-# Developer Workflow 🚀
+# Developer Workflow
 
 **Developer Workflow** is a lightweight, browser-based productivity suite designed specifically for developers. It helps you track tasks, manage resources, and visualize your progress—everything is powered by local storage.
 
@@ -43,3 +43,26 @@ Since this is a client-side application, you don't need to install anything!
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/Lohar109/Developer-Workflow.git](https://github.com/Lohar109/Developer-Workflow.git)
+
+---
+
+## 📂 Project Structure
+
+```text
+Developer-Workflow/
+│
+├── index.html          # Main application dashboard
+├── analytics.html      # Productivity and stats visualization page
+├── settings.html       # Theme and layout configuration page
+├── profile.html        # User profile and social links page
+│
+├── script.js           # Core logic for tasks, resources, and progress
+├── analytics.js        # Logic for Chart.js and productivity statistics
+├── settings.js         # Logic for theme switching and data management
+├── profile.js          # Logic for profile updates and bio management
+│
+├── style.css           # Global styles used across all pages
+├── settings.css        # Specific styles for the settings interface
+├── profile.css         # Specific styles for the profile layout
+│
+└── README.md           # Project documentation
