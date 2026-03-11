@@ -1,6 +1,6 @@
-# DevFocus Dashboard 🚀
+# Developer Workflow 🚀
 
-**DevFocus** is a lightweight, browser-based productivity suite designed specifically for developers. It helps you track tasks, manage resources, and visualize your progress without the need for a complex backend—everything is powered by local storage.
+**Developer Workflow** is a lightweight, browser-based productivity suite designed specifically for developers. It helps you track tasks, manage resources, and visualize your progress—everything is powered by local storage.
 
 ---
 
@@ -8,27 +8,22 @@
 
 ### 📋 Task Management
 * **Daily Tracker:** Create and manage tasks with ease.
-* **File Attachments:** Attach relevant documents or images directly to your tasks using Base64 encoding.
-* **Progress Tracking:** Real-time progress bar showing your completion percentage.
+* **File Attachments:** Attach documents or images directly to your tasks.
+* **Progress Tracking:** Real-time progress bar showing completion percentage.
 
 ### 📊 Productivity Analytics
 * **Visual Trends:** Weekly productivity breakdown powered by **Chart.js**.
-* **Smart Stats:** Track your total tasks done, learning hours, and current daily streaks.
+* **Smart Stats:** Track total tasks, learning hours, and daily streaks.
 * **History Search:** Filter completed tasks, files, and links by specific dates.
 
 ### 🔗 Resource & Notes
 * **Link Manager:** Save important documentation and tutorial links.
-* **Quick Notes:** A dedicated space for jotting down thoughts or code snippets instantly.
+* **Quick Notes:** A dedicated space for jotting down thoughts or code snippets.
 
 ### 👤 Profile & Customization
 * **Personalized Profile:** Set your username, bio, and social links (GitHub, LinkedIn).
-* **Avatar Support:** Upload a profile picture that persists across the app.
 * **Theming:** Switch between **Midnight** (Dark) and **Light** modes.
-* **Widget Control:** Toggle specific dashboard sections (Notes/Resources) on or off.
-
-### 💾 Data Portability
-* **JSON Export:** Download all your data (tasks, notes, profile) as a `.json` backup.
-* **Privacy First:** All data stays on your local machine via `localStorage`.
+* **Widget Control:** Toggle dashboard sections (Notes/Resources) on or off.
 
 ---
 
@@ -38,7 +33,6 @@
 * **Scripting:** Vanilla JavaScript (ES6+)
 * **Charts:** Chart.js
 * **Icons:** FontAwesome
-* **Fonts:** Space Grotesk & Roboto Mono
 
 ---
 
@@ -48,4 +42,4 @@ Since this is a client-side application, you don't need to install anything!
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/devfocus-dashboard.git](https://github.com/your-username/devfocus-dashboard.git)
+   git clone [https://github.com/Lohar109/Developer-Workflow.git](https://github.com/Lohar109/Developer-Workflow.git)
