@@ -1,0 +1,94 @@
+/* Styles for the settings page */
+
+.theme-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.theme-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.theme-preview.active {
+    border-color: #fff;
+}
+
+.theme-color {
+    width: 50px;
+    height: 15px;
+    border-radius: 4px;
+}
+
+.layout-toggles {
+    margin-top: 0.5rem;
+}
+
+.layout-toggles .toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.layout-toggles .toggle-switch:last-child {
+    border-bottom: none;
+}
+
+/* Basic toggle switch styling */
+.toggle-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 40px;
+    height: 22px;
+    background-color: var(--toggle-bg-off);
+    border-radius: 11px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-input::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s;
+}
+
+.toggle-input:checked {
+    background-color: var(--accent-color);
+}
+
+.toggle-input:checked::before {
+    transform: translateX(18px);
+}
+
+.data-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-danger {
+    background-color: #da3633;
+}
+
+.btn-danger:hover {
+    background-color: #b92521;
+}

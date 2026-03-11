@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - DevFocus Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script>
+        // Apply theme immediately
+        const globalSettings = JSON.parse(localStorage.getItem('devfocus-settings')) || {};
+        if (globalSettings.theme) {
+            document.documentElement.setAttribute('data-theme', globalSettings.theme);
+        }
+    </script>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>DevFocus</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li class="active"><a href="settings.html">Settings</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Settings</h1>
+                <p>Customize your dashboard experience.</p>
+            </header>
+
+            <div class="widgets-grid">
+                <!-- Theme Settings -->
+                <section class="widget-card">
+                    <h2>Color Theme</h2>
+                    <p>Select your preferred interface theme.</p>
+                    <div class="theme-switcher">
+                        <div class="theme-preview" data-theme="midnight" title="Midnight">
+                            <div class="theme-color" style="background-color: #0d1117;"></div>
+                            <div class="theme-color" style="background-color: #c9d1d9;"></div>
+                            <div class="theme-color" style="background-color: #21c5c7;"></div>
+                        </div>
+                        <div class="theme-preview" data-theme="light" title="Light">
+                            <div class="theme-color" style="background-color: #f6f8fa;"></div>
+                            <div class="theme-color" style="background-color: #24292f;"></div>
+                            <div class="theme-color" style="background-color: #0969da;"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Layout Settings -->
+                <section class="widget-card">
+                    <h2>Dashboard Layout</h2>
+                    <p>Toggle visibility of dashboard widgets.</p>
+                    <div class="layout-toggles">
+                        <div class="toggle-switch">
+                            <label for="showNotesToggle">Show Quick Notes</label>
+                            <input type="checkbox" id="showNotesToggle" class="toggle-input">
+                        </div>
+                        <div class="toggle-switch">
+                            <label for="showResourcesToggle">Show Resource Links</label>
+                            <input type="checkbox" id="showResourcesToggle" class="toggle-input">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Data Management -->
+                <section class="widget-card">
+                    <h2>Data Management</h2>
+                    <p>Export your data or reset the application.</p>
+                    <div class="data-buttons">
+                        <button id="exportDataBtn">Export All Data</button>
+                        <button id="resetDataBtn" class="btn-danger">Reset All Data</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

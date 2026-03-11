@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - DevFocus Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        // Apply theme immediately
+        const globalSettings = JSON.parse(localStorage.getItem('devfocus-settings')) || {};
+        if (globalSettings.theme) {
+            document.documentElement.setAttribute('data-theme', globalSettings.theme);
+        }
+    </script>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>DevFocus</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li class="active"><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Profile Header -->
+            <header class="profile-header">
+                <label for="profilePictureInput" class="profile-picture-container" title="Change profile picture">
+                    <div id="defaultProfileAvatar"></div>
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profilePicture">
+                </label>
+                <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+                <div class="profile-info">
+                    <h1 id="profileUsername">Developer</h1>
+                    <div class="profile-socials" id="profileSocialsDisplay">
+                        <!-- Social links will be rendered here -->
+                    </div>
+                </div>
+            </header>
+
+            <div class="widgets-grid">
+                <!-- Bio Section -->
+                <section class="widget-card">
+                    <h2>Professional Bio</h2>
+                    <textarea id="bioTextarea" placeholder="Tell us about yourself..."></textarea>
+                </section>
+
+                <!-- Statistics -->
+                <section class="widget-card stat-card">
+                    <h2>Total Tasks Completed</h2>
+                    <p id="totalTasksStat" class="stat-number">0</p>
+                </section>
+
+                <!-- Edit Profile Details -->
+                <section class="widget-card">
+                    <h2>Edit Profile</h2>
+                    <form id="editProfileForm">
+                        <label for="usernameInput">Username</label>
+                        <input type="text" id="usernameInput" placeholder="Your Name">
+                        
+                        <label for="linkedinInput">LinkedIn URL</label>
+                        <input type="url" id="linkedinInput" placeholder="https://linkedin.com/in/...">
+                        
+                        <label for="githubInput">GitHub URL</label>
+                        <input type="url" id="githubInput" placeholder="https://github.com/...">
+                        
+                        <label for="portfolioInput">Portfolio URL</label>
+                        <input type="url" id="portfolioInput" placeholder="https://your-site.com">
+                        
+                        <button type="submit">Save Profile</button>
+                    </form>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

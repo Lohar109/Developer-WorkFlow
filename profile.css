@@ -1,0 +1,83 @@
+/* Styles for the profile page */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-picture-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent-color);
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#defaultProfileAvatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+#profilePicture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-socials a {
+    color: var(--text-secondary-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.profile-socials a:hover {
+    color: var(--accent-color);
+}
+
+#editProfileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#editProfileForm label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary-color);
+}
+
+#editProfileForm button {
+    margin-top: 1rem;
+}
+
+#bioTextarea {
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-family: var(--font-primary);
+}

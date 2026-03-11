@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - DevFocus Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script>
+        // Apply theme immediately
+        const globalSettings = JSON.parse(localStorage.getItem('devfocus-settings')) || {};
+        if (globalSettings.theme) {
+            document.documentElement.setAttribute('data-theme', globalSettings.theme);
+        }
+    </script>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>DevFocus</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li class="active"><a href="analytics.html">Analytics</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Productivity Analytics</h1>
+                <p>Review your performance and identify patterns.</p>
+            </header>
+
+            <!-- Statistics Cards -->
+            <div class="widgets-grid" id="statsGrid">
+                <div class="widget-card stat-card">
+                    <h2>Total Tasks Done</h2>
+                    <p id="totalTasksStat" class="stat-number">0</p>
+                </div>
+                <div class="widget-card stat-card">
+                    <h2>Current Streak</h2>
+                    <p id="streakStat" class="stat-number">0 Days</p>
+                </div>
+                <div class="widget-card stat-card">
+                    <h2>Learning Hours</h2>
+                    <p id="hoursStat" class="stat-number">0</p>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="widgets-grid" id="chartsGrid">
+                <section class="widget-card card-chart">
+                    <h2>Weekly Productivity</h2>
+                    <canvas id="weeklyChart"></canvas>
+                </section>
+                <section class="widget-card card-recent-tasks">
+                    <h2>Recently Completed Tasks</h2>
+                    <ul id="recentTasksList"></ul>
+                </section>
+            </div>
+
+            <!-- Attachments Overview -->
+            <div class="widgets-grid" id="attachmentsGrid">
+                <section class="widget-card">
+                    <h2>Used Resource Links</h2>
+                    <ul id="analyticsResourceList"></ul>
+                </section>
+                <section class="widget-card">
+                    <h2>Uploaded Files</h2>
+                    <ul id="analyticsFileList"></ul>
+                </section>
+            </div>
+
+            <!-- Footer: Date Search -->
+            <footer class="main-footer">
+                <section class="widget-card card-date-picker">
+                    <h2>Find Tasks by Date</h2>
+                    <div class="date-selector-container">
+                        <label for="datePicker">Select a date to see completed tasks:</label>
+                        <input type="date" id="datePicker">
+                    </div>
+                    <ul id="tasksForDateList"></ul>
+                </section>
+                <section class="widget-card" id="linksForDateCard">
+                    <h2>Links Added on This Date</h2>
+                    <ul id="linksForDateList"></ul>
+                </section>
+                <section class="widget-card" id="filesForDateCard">
+                    <h2>Files from Tasks Completed on This Date</h2>
+                    <ul id="filesForDateList"></ul>
+                </section>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+</body>
+</html>
