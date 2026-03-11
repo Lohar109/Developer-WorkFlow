@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Work-Flow</title>
+    <title>Developer Workflow</title>
+
+    <meta property="og:title" content="Developer Workflow Dashboard">
+    <meta property="og:description" content="A personal productivity suite for developers to track tasks and stats.">
+    <meta property="og:url" content="https://developer-workflow.onrender.com">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Lohar109/Developer-Workflow/main/screenshot.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +25,6 @@
         }
     </script>
     <div class="dashboard-container">
-        <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h3>DevFocus</h3>
@@ -34,12 +39,10 @@
             </nav>
         </aside>
 
-        <!-- Main Dashboard Content -->
         <main class="main-content">
             <header class="main-header">
                 <div id="headerProfilePic" class="header-profile-pic">
-                    <!-- Populated by JS -->
-                </div>
+                    </div>
                 <div class="main-header-text">
                     <h1 id="welcomeHeader">Welcome, Developer!</h1>
                     <p>Stay focused and track your progress.</p>
@@ -47,7 +50,6 @@
             </header>
 
             <div class="widgets-grid">
-                <!-- Progress Visualization -->
                 <section class="widget-card card-progress">
                     <h2>Overall Progress</h2>
                     <div class="progress-bar-container">
@@ -56,30 +58,25 @@
                     <p id="progressText">0% Complete</p>
                 </section>
 
-                <!-- Daily Task Tracker -->
                 <section class="widget-card card-tasks">
                     <h2>Daily Task Tracker</h2>
                     <form id="taskForm">
                         <input type="text" id="taskInput" placeholder="Add a new task..." required>
                         <input type="file" id="fileInput" style="display: none;">
-                        <label for="fileInput" class="file-label" title="Attach a file"><img src="attach-file.png" alt="Attach File"></label>
+                        <label for="fileInput" class="file-label" title="Attach a file">📄</label>
                         <button type="submit">Add</button>
                     </form>
                     <p id="fileNameDisplay"></p>
                     <ul id="taskList">
-                        <!-- Tasks will be dynamically inserted here -->
-                    </ul>
+                        </ul>
                 </section>
 
-                <!-- Pending Tasks -->
                 <section class="widget-card card-pending">
                     <h2>Pending Tasks</h2>
                     <ul id="pendingTaskList">
-                        <!-- Pending tasks will be dynamically inserted here -->
-                    </ul>
+                        </ul>
                 </section>
 
-                <!-- Resource Section -->
                 <section class="widget-card card-resources">
                     <h2>Resource Links</h2>
                     <form id="resourceForm">
@@ -88,11 +85,9 @@
                         <button type="submit">Add Link</button>
                     </form>
                     <ul id="resourceList">
-                        <!-- Resources will be dynamically inserted here -->
-                    </ul>
+                        </ul>
                 </section>
 
-                <!-- Note-taking Area -->
                 <section class="widget-card card-notes">
                     <h2>Quick Notes</h2>
                     <textarea id="notesArea" placeholder="Jot down your thoughts..."></textarea>
