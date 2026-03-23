@@ -1,8 +1,8 @@
 # Developer Workflow
 
-**🔗 [Live Demo](https://developer-workflow.onrender.com)**
-
 **Developer Workflow** is a lightweight, browser-based productivity suite designed specifically for developers. It helps you track tasks, manage resources, and visualize your progress—everything is powered by local storage.
+
+**🔗 [Live](https://developer-workflow.onrender.com)**
 
 ---
 
